@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '../Button';
 import Form from '../Form';
 import Input from '../Input';
 
-const App = () => {
+const FullForm = ({ username, setUsername }) => {
   const onSubmit = username => console.log(username);
-  return <UsernameForm onSubmit={onSubmit} />;
-};
-
-const UsernameForm = ({ onSubmit }) => {
-  const [username, setUsername] = useState('');
 
   return (
     <Form
@@ -27,7 +22,6 @@ const UsernameForm = ({ onSubmit }) => {
       <Button
         style={{ backgroundColor: 'white' }}
         type={'submit'}
-        onClick={() => console.log('submit')}
       >
         Send
       </Button>
@@ -35,4 +29,4 @@ const UsernameForm = ({ onSubmit }) => {
   );
 };
 
-export default App;
+export default FullForm;

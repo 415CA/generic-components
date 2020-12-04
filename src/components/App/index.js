@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       App
-      <FullForm />
+      <FullForm username={username} setUsername={setUsername} />
       <NewFrom username={username} setUsername={setUsername} />
     </div>
   )
